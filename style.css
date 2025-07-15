@@ -22,41 +22,46 @@
   padding: 0;
 }
 body {
-  width: fit-content;
-  height: fit-content;
+  height: 100%;
+  width: 100vw;
   display: flex;
   justify-content: center;
-  justify-self: center;
   background-color: var(--WhiteSecondary);
   overflow-x: hidden;
+  overflow-y: auto;
+ 
+}
+html {
+  scroll-behavior: smooth;
+  
 }
 .background-raduis {
-    width: 32.5rem;
-    position: absolute;
-    z-index: -1;
-    background-image: linear-gradient(
-      135deg,
-      var(--PurpleGradient500),
-      var(--PinkGradient500)
-    );
-    top: 0;
-    height: clamp(32rem, 27.8627rem + 17.6526vw, 43.75rem);
-    left: clamp(-20.75rem, -25.8556rem + 21.784vw, -6.25rem);
-    border-radius: 0 0 1000px 1000px;
+  width: 32.5rem;
+  position: absolute;
+  z-index: -1;
+  background-image: linear-gradient(
+    135deg,
+    var(--PurpleGradient500),
+    var(--PinkGradient500)
+  );
+  top: 0;
+  height: clamp(32rem, 27.8627rem + 17.6526vw, 43.75rem);
+  left: clamp(-20.75rem, -25.8556rem + 21.784vw, -6.25rem);
+  border-radius: 0 0 1000px 1000px;
 }
 .background-raduis-two {
-    width: 32.5rem;
-    position: absolute;
-    z-index: -1;
-    background-image: linear-gradient(
-      135deg,
-      var(--WhiteSecondary),
-      var(--editedbackground)
-    );
-    bottom: 0;
-    height: clamp(32rem, 27.8627rem + 17.6526vw, 42.5rem);
-    right: clamp(-20.75rem, -23.743rem + 12.77vw, -12.25rem);
-    border-radius:1000px 1000px 0 0;
+  width: 32.5rem;
+  position: absolute;
+  z-index: -1;
+  background-image: linear-gradient(
+    135deg,
+    var(--WhiteSecondary),
+    var(--editedbackground)
+  );
+  bottom: 0;
+  height: clamp(32rem, 27.8627rem + 17.6526vw, 42.5rem);
+  right: clamp(-20.75rem, -23.743rem + 12.77vw, -12.25rem);
+  border-radius: 1000px 1000px 0 0;
 }
 .container {
   width: 100%;
@@ -75,13 +80,10 @@ body {
   padding: 0.75rem;
   box-shadow: 8px 1.5rem 2rem var(--Gray500);
   position: relative;
+  transition: all ease-in 0.5s;
 }
 .chat-width:hover {
-  transition: transform 0.15s ease-in-out, background-color 0.3s ease-in-out,
-    box-shadow 0.3s ease-in-out;
-  /* transform: translateY(-0.5rem);
-    background-color: var(--editedbackground);
-    box-shadow: 8px 2rem 3rem var(--Gray500); */
+    transform:  scale(95%);
 }
 .chat-container {
   width: 100%;
@@ -277,7 +279,13 @@ body {
   font-size: 1.15rem;
   color: var(--Gray500);
 }
-@media screen and (min-width: 375px) and (max-width: 768px) {
+@media screen and (min-width: 350px) and (max-width: 900px) {
+  body {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    justify-self: center;
+  }
   .container {
     display: flex;
     flex-direction: column;
@@ -285,8 +293,10 @@ body {
     align-items: center;
     padding: 4rem 1.5rem;
     width: 100%;
+    height: 100vh;
     gap: 4em;
   }
+
   .chat-width {
     width: 19rem;
     margin: 1rem;
@@ -294,6 +304,8 @@ body {
   .info {
     width: 19rem;
     text-align: center;
+    margin: 0;
+    position: relative;
   }
   .title {
     font-size: 2.5rem;
