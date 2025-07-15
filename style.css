@@ -29,11 +29,9 @@ body {
   background-color: var(--WhiteSecondary);
   overflow-x: hidden;
   overflow-y: auto;
- 
 }
 html {
   scroll-behavior: smooth;
-  
 }
 .background-raduis {
   width: 32.5rem;
@@ -80,11 +78,11 @@ html {
   margin: 5rem;
   padding: 0.75rem;
   box-shadow: 8px 1.5rem 2rem var(--Gray500);
- 
+
   transition: all ease-in 0.5s;
 }
 .chat-width:hover {
-    transform:  scale(95%);
+  transform: scale(95%);
 }
 .chat-container {
   width: 100%;
@@ -94,7 +92,6 @@ html {
   border: 0.001rem hidden var(--Gray300);
   box-shadow: inset 0 0 0.25rem var(--Gray300);
   border-top: none;
-  
 }
 .notch {
   width: 9.5rem;
@@ -287,9 +284,11 @@ html {
     align-items: center;
     justify-content: center;
     justify-self: center;
-     position: relative;
-     height:100%;
-     border: 2px solid var(--Purple950);
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 100%;
+    border: 2px solid var(--Purple950);
   }
   .container {
     display: flex;
@@ -305,7 +304,7 @@ html {
   .chat-width {
     width: 19rem;
     margin: 1rem;
-     position: relative;
+    position: relative;
   }
   .info {
     width: 19rem;
