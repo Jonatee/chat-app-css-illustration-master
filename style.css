@@ -24,6 +24,9 @@
 body {
   width: fit-content;
   height: fit-content;
+  display: flex;
+  justify-content: center;
+  justify-self: center;
   background-color: var(--WhiteSecondary);
   overflow-x: hidden;
 }
@@ -51,7 +54,7 @@ body {
       var(--editedbackground)
     );
     bottom: 0;
-   height: clamp(32rem, 27.8627rem + 17.6526vw, 42.5rem);
+    height: clamp(32rem, 27.8627rem + 17.6526vw, 42.5rem);
     right: clamp(-20.75rem, -23.743rem + 12.77vw, -12.25rem);
     border-radius:1000px 1000px 0 0;
 }
