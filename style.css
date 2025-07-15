@@ -288,7 +288,6 @@ html {
     overflow-x: hidden;
     overflow-y: auto;
     height: 100%;
-    border: 2px solid var(--Purple950);
   }
   .container {
     display: flex;
